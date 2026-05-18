@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table Example</title>
+    <style>
+
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        h2{
+            color:darksalmon
+        }
+        table{
+            border-collapse: collapse;
+            width: 300px;
+            margin-top: 20px;
+        }
+        td,th{
+            border:1px, solid rgb(0, 0, 0);
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background-color: darkorange;
+        }       
+    </style>
+    <body>
+        <h2>Student Records</h2><!--table title-->
+        <table id="studentTable">
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+            <script lang="JavaScript">
+                //declare and initialize the 2d Array of students
+                let students = [
+                                ["John", 90]
+                                ["Denise", 85]
+                              ];
+
+                //get the table element
+                let tableElement = document.getElementById("studentTable");
+                
+                for(indexR = 0; indexR<student.length;student++){ //set row traversing in loop
+                   let row = document.getElementById("tr");
+                   for(indexR = 0; indexC<student[innexR].length;indexC++){
+                       let td = document.createElement("td");
+                       cell.textContent =students[indexR][indexC];
+                       row.appendChild(cell);
+                    }
+                    tableElement.appendChild(row);//add student tr to table
+                }
+            </script>
+        </table>
+    </body>
